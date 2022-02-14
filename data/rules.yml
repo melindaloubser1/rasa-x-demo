@@ -11,3 +11,33 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: animal form
+  steps:
+  - intent: ask_about_animals
+  - action: animal_form
+  - active_loop: animal_form
+  - active_loop: null
+  - action: utter_facts
+
+- rule: talk about animals
+  steps:
+    - intent: tell_favorite_animal
+    - or:
+      - slot_was_set:
+        - animal: bears
+      - slot_was_set:
+        - animal: cats
+      - slot_was_set:
+        - animal: lions
+    - action: utter_have_facts
+
+- rule: can't talk about animals
+  steps:
+    - intent: tell_favorite_animal
+    - or:
+      - slot_was_set:
+        - animal: dogs
+      - slot_was_set:
+        - animal: sheep
+    - action: utter_cant_help

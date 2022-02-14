@@ -1,6 +1,33 @@
 version: "3.0"
 
 nlu:
+- intent: ask_about_animals
+  examples: |
+    - can you tell me about animals
+    - i want to hear animal facts
+    - please tell me about animals
+    - will you tell me a fun fact about an animal
+    - please tell me about [lions](animal)
+    - i want to know about [bears](animal)
+    - can you tell me about [cats](animal)
+
+- intent: tell_favorite_animal
+  examples: |
+    - i love [bears](animal)!
+    - [bears](animal) are my favorite
+    - i really like [cats](animal)
+    - i think [lions](animal) are so cool
+    - i think [dogs](animal) are so cool
+    - i think [sheep](animal) are so cool
+
+- lookup: animal
+  examples: |
+    - cats
+    - lions
+    - bears
+    - dogs
+    - sheep
+
 - intent: greet
   examples: |
     - hey

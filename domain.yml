@@ -8,6 +8,25 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_about_animals
+  - tell_favorite_animal
+
+entities:
+  - animal
+
+slots:
+  animal:
+    type: categorical
+    influence_conversation: true
+    values:
+    - bears
+    - cats
+    - sheep
+    - lions
+    - dogs
+    mappings:
+    - type: from_entity
+      entity: animal
 
 responses:
   utter_greet:
@@ -29,6 +48,23 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_ask_animal:
+    - text: "Which animal do you want facts about?"
+
+  utter_facts:
+    - text: "This is where I'd tell you a fact about {animal}."
+
+  utter_cant_help:
+  - text: "I'm sorry, I don't have any facts about {animal}."
+
+  utter_have_facts:
+  - text: "Cool! If you like, I can tell you a few facts about {animal}."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+forms:
+  animal_form:
+    required_slots:
+      - animal
