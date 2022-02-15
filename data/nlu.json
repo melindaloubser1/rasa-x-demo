@@ -1,0 +1,410 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "can you tell me about animals",
+        "intent": "ask_about_animals"
+      },
+      {
+        "text": "i want to hear animal facts",
+        "intent": "ask_about_animals"
+      },
+      {
+        "text": "please tell me about animals",
+        "intent": "ask_about_animals"
+      },
+      {
+        "text": "will you tell me a fun fact about an animal",
+        "intent": "ask_about_animals"
+      },
+      {
+        "text": "please tell me about lions",
+        "intent": "ask_about_animals",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "lions",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i want to know about bears",
+        "intent": "ask_about_animals",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "bears",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "can you tell me about cats",
+        "intent": "ask_about_animals",
+        "entities": [
+          {
+            "start": 22,
+            "end": 26,
+            "value": "cats",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i love bears!",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "bears",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "bears are my favorite",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "bears",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i really like cats",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 14,
+            "end": 18,
+            "value": "cats",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i think lions are so cool",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "lions",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i think dogs are so cool",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "dogs",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "i think sheep are so cool",
+        "intent": "tell_favorite_animal",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "sheep",
+            "entity": "animal"
+          }
+        ]
+      },
+      {
+        "text": "hey",
+        "intent": "greet"
+      },
+      {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
+        "text": "hi",
+        "intent": "greet"
+      },
+      {
+        "text": "hello there",
+        "intent": "greet"
+      },
+      {
+        "text": "good morning",
+        "intent": "greet"
+      },
+      {
+        "text": "good evening",
+        "intent": "greet"
+      },
+      {
+        "text": "moin",
+        "intent": "greet"
+      },
+      {
+        "text": "hey there",
+        "intent": "greet"
+      },
+      {
+        "text": "let's go",
+        "intent": "greet"
+      },
+      {
+        "text": "hey dude",
+        "intent": "greet"
+      },
+      {
+        "text": "goodmorning",
+        "intent": "greet"
+      },
+      {
+        "text": "goodevening",
+        "intent": "greet"
+      },
+      {
+        "text": "good afternoon",
+        "intent": "greet"
+      },
+      {
+        "text": "cu",
+        "intent": "goodbye"
+      },
+      {
+        "text": "good by",
+        "intent": "goodbye"
+      },
+      {
+        "text": "cee you later",
+        "intent": "goodbye"
+      },
+      {
+        "text": "good night",
+        "intent": "goodbye"
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "have a nice day",
+        "intent": "goodbye"
+      },
+      {
+        "text": "see you around",
+        "intent": "goodbye"
+      },
+      {
+        "text": "bye bye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "see you later",
+        "intent": "goodbye"
+      },
+      {
+        "text": "yes",
+        "intent": "affirm"
+      },
+      {
+        "text": "y",
+        "intent": "affirm"
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm"
+      },
+      {
+        "text": "of course",
+        "intent": "affirm"
+      },
+      {
+        "text": "that sounds good",
+        "intent": "affirm"
+      },
+      {
+        "text": "correct",
+        "intent": "affirm"
+      },
+      {
+        "text": "no",
+        "intent": "deny"
+      },
+      {
+        "text": "n",
+        "intent": "deny"
+      },
+      {
+        "text": "never",
+        "intent": "deny"
+      },
+      {
+        "text": "I don't think so",
+        "intent": "deny"
+      },
+      {
+        "text": "don't like that",
+        "intent": "deny"
+      },
+      {
+        "text": "no way",
+        "intent": "deny"
+      },
+      {
+        "text": "not really",
+        "intent": "deny"
+      },
+      {
+        "text": "perfect",
+        "intent": "mood_great"
+      },
+      {
+        "text": "great",
+        "intent": "mood_great"
+      },
+      {
+        "text": "amazing",
+        "intent": "mood_great"
+      },
+      {
+        "text": "feeling like a king",
+        "intent": "mood_great"
+      },
+      {
+        "text": "wonderful",
+        "intent": "mood_great"
+      },
+      {
+        "text": "I am feeling very good",
+        "intent": "mood_great"
+      },
+      {
+        "text": "I am great",
+        "intent": "mood_great"
+      },
+      {
+        "text": "I am amazing",
+        "intent": "mood_great"
+      },
+      {
+        "text": "I am going to save the world",
+        "intent": "mood_great"
+      },
+      {
+        "text": "super stoked",
+        "intent": "mood_great"
+      },
+      {
+        "text": "extremely good",
+        "intent": "mood_great"
+      },
+      {
+        "text": "so so perfect",
+        "intent": "mood_great"
+      },
+      {
+        "text": "so good",
+        "intent": "mood_great"
+      },
+      {
+        "text": "so perfect",
+        "intent": "mood_great"
+      },
+      {
+        "text": "my day was horrible",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "I am sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "I don't feel very well",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "I am disappointed",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "super sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "I'm so sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "very sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "unhappy",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "not good",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "not very good",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "extremly sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "so saad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "so sad",
+        "intent": "mood_unhappy"
+      },
+      {
+        "text": "are you a bot?",
+        "intent": "bot_challenge"
+      },
+      {
+        "text": "are you a human?",
+        "intent": "bot_challenge"
+      },
+      {
+        "text": "am I talking to a bot?",
+        "intent": "bot_challenge"
+      },
+      {
+        "text": "am I talking to a human?",
+        "intent": "bot_challenge"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [
+      {
+        "name": "animal",
+        "elements": "data/lookup/animals.txt"
+      }
+    ],
+    "entity_synonyms": []
+  }
+}
