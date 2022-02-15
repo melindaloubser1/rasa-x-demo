@@ -1,0 +1,44 @@
+version: "3.0"
+
+stories:
+- story: talk about animals test OR story
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      i think [lions](animal) are so cool
+    intent: tell_favorite_animal
+  - slot_was_set:
+    - animal: lions
+  - action: utter_have_facts
+
+- story: talk about animals test OR rules
+  steps:
+  - user: |
+      i think [lions](animal) are so cool
+    intent: tell_favorite_animal
+  - slot_was_set:
+    - animal: lions
+  - action: utter_have_facts
+  - user: |
+      i think [sheep](animal) are so cool
+    intent: tell_favorite_animal
+  - slot_was_set:
+    - animal: sheep
+  - action: utter_cant_help
+
+- rule: test animal form
+  steps:
+  - user: |
+      can you tell me about animals
+    intent: ask_about_animals
+  - action: animal_form
+  - active_loop: animal_form
+  - user: |
+      i want to know about [bears](animal)
+    intent: ask_about_animals
+  - action: animal_form
+  - active_loop: null
+  - action: utter_facts
