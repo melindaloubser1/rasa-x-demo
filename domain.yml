@@ -1,4 +1,4 @@
-version: "3.0"
+version: "2.0"
 
 intents:
   - greet
@@ -24,9 +24,6 @@ slots:
     - sheep
     - lions
     - dogs
-    mappings:
-    - type: from_entity
-      entity: animal
 
 responses:
   utter_greet:
@@ -54,12 +51,6 @@ responses:
   utter_facts:
     - text: "This is where I'd tell you a fact about {animal}."
 
-  utter_cant_help:
-  - text: "I'm sorry, I don't have any facts about {animal}."
-
-  utter_have_facts:
-  - text: "Cool! If you like, I can tell you a few facts about {animal}."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -67,4 +58,6 @@ session_config:
 forms:
   animal_form:
     required_slots:
-      - animal
+      animal:
+        - type: from_entity
+          entity: animal
