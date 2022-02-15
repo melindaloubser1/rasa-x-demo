@@ -1,8 +1,0 @@
-rules:
-- rule: animal form
-  steps:
-  - intent: ask_about_animals
-  - action: animal_form
-  - active_loop: animal_form
-  - active_loop: null
-  - action: utter_facts

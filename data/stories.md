@@ -29,3 +29,10 @@
 ## Say 'I am a bot' anytime the user challenges
 * bot_challenge
   - utter_iamabot
+
+## animal form
+* ask_about_animals
+  - animal_form
+  - form{"name": "animal_form"}
+  - form{"name": null}
+  - utter_facts
