@@ -29,7 +29,7 @@ stories:
     - animal: sheep
   - action: utter_cant_help
 
-- rule: test animal form
+- story: test animal form
   steps:
   - user: |
       can you tell me about animals
