@@ -28,3 +28,17 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: talk about animals
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_favorite_animal
+  - or:
+    - slot_was_set:
+      - animal: bears
+    - slot_was_set:
+      - animal: cats
+    - slot_was_set:
+      - animal: lions
+  - action: utter_have_facts
