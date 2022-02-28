@@ -1,70 +1,58 @@
-version: "3.0"
-
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_about_animals
-  - tell_favorite_animal
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- ask_about_animals
+- tell_favorite_animal
+- sims_vp_lotus
 entities:
-  - animal
-
+- animal
+- name
 slots:
   animal:
     type: categorical
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: animal
     values:
     - bears
     - cats
     - sheep
     - lions
     - dogs
-    mappings:
-    - type: from_entity
-      entity: animal
-
+    - new
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
   utter_ask_animal:
-    - text: "Which animal do you want facts about?"
-
+  - text: new
   utter_facts:
-    - text: "This is where I'd tell you a fact about {animal}."
-
+  - text: This is where I'd tell you a fact about {animal}.
   utter_cant_help:
-  - text: "I'm sorry, I don't have any facts about {animal}."
-
+  - text: I'm sorry, I don't have any facts about {animal}.
   utter_have_facts:
-  - text: "Cool! If you like, I can tell you a few facts about {animal}."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
-
+  - text: Cool! If you like, I can tell you a few facts about {animal}.
 forms:
   animal_form:
     required_slots:
-      - animal
+    - animal

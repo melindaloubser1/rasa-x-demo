@@ -1,5 +1,4 @@
 version: "3.0"
-
 nlu:
 - intent: ask_about_animals
   examples: |
@@ -10,7 +9,6 @@ nlu:
     - please tell me about [lions](animal)
     - i want to know about [bears](animal)
     - can you tell me about [cats](animal)
-
 - intent: tell_favorite_animal
   examples: |
     - i love [bears](animal)!
@@ -19,15 +17,6 @@ nlu:
     - i think [lions](animal) are so cool
     - i think [dogs](animal) are so cool
     - i think [sheep](animal) are so cool
-
-- lookup: animal
-  examples: |
-    - cats
-    - lions
-    - bears
-    - dogs
-    - sheep
-
 - intent: greet
   examples: |
     - hey
@@ -43,7 +32,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -56,7 +44,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -65,7 +52,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -75,7 +61,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -92,7 +77,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -109,10 +93,19 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: ae_friend_previous
+  examples: |
+    - Machine cameron assignment apparently
+- lookup: animal
+  examples: |
+    - cats
+    - lions
+    - bears
+    - dogs
+    - sheep
